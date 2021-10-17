@@ -1,0 +1,92 @@
+﻿@model OdafHesapProgrami.DTO.PageDTO<OdafHesapProgrami.Models.ProjeGenel>
+
+@{
+    ViewBag.Title = "ProjeGenel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int j = 0;
+}
+<style>
+    .projeGenelListTable tbody tr:hover {
+        background-color: #d4f0fb;
+    }
+
+    .activeProject {
+        background-color: #d4f0fb;
+    }
+</style>
+<section>
+    <div class="header bg-primary pb-6">
+        <div class="container-fluid">
+            <div class="header-body">
+                <div class="row align-items-center py-4">
+                    <div class="col-lg-4 col-4">
+                        <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                                <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")"><i class="fas fa-home"></i></a></li>
+                                <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">Ana Sayfa</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Proje Genel</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <div class="col-lg-6 col-6 text-right">
+                        <form style="float: right;" class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
+                            <div class="form-group mb-0">
+                                <div class="input-group input-group-alternative input-group-merge">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-search"></i></span>
+                                    </div>
+                                    <input id="trafoAraInput" class="form-control" placeholder="Trafo No Ara" type="text">
+                                </div>
+                            </div>
+                            <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
+                                <span aria-hidden="true"></span>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="col-lg-2 col-2 text-right">
+                        <a href="javascript:void(0)" id="projeOlusturBtn" class="btn btn-success">Ekle</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container-fluid mt--6">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+
+                    <div class="card-header border-0">
+                        <h3 class="mb-0">Proje Tablosu</h3>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table align-items-center table-flush projeGenelListTable">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col" class="sort" data-sort="name">#</th>
+                                    <th scope="col" class="sort" data-sort="budget">RootID</th>
+                                    <th scope="col" class="sort" data-sort="budget">Task_ID</th>
+                                    <th scope="col" class="sort" data-sort="budget">TasarimBelgesiNo</th>
+                                    <th scope="col" class="sort" data-sort="budget">TrafoTanimKodu</th>
+                                    <th scope="col" class="sort" data-sort="budget">TrafoNo</th>
+                                    <th scope="col" class="sort" data-sort="budget">ProjeAdi</th>
+                                    <th scope="col" class="sort" data-sort="budget">F</th>
+                                    <th scope="col" class="sort" data-sort="budget">SogutmaSekli</th>
+                                    <th scope="col" class="sort" data-sort="budget">BaglantiGrubu</th>
+                                    <th scope="col" class="sort" data-sort="budget">SargıSayisi</th>
+                                    <th scope="col" class="sort" data-sort="budget">ImalatNormu</th>
+                                    <th scope="col" class="sort" data-sort="budget">[Teta Müh]</th>
+                                    <th scope="col" class="sort" data-sort="budget">Sargi</th>>
+                                    <th scope="col" class="sort" data-sort="budget">Yag</th>
+                                    <th scope="col" class="sort" data-sort="budget">CalismaYeriYuksekligi</th>
+                                    <th scope="col" class="sort" data-sort="budget">MaxKDSuresi</th>
+                                    <th scope="col" class="sort" data-sort="budget">SargiGerilimi</th>
+                                    <th scope="col" class="sort" data-sort="budget">ToplamBakirAgirligi</th>
+                                    <th scope="col" class="sort" data-sort="budget">SargiOlculeri</th>
+                                    <th scope="col" class="sort" data-sort="budget">Aciklama</th>
+                                </tr>
+                            </thead>
+</section>

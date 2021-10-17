@@ -1,0 +1,188 @@
+﻿
+@{
+    ViewBag.Title = "ProjeEkleTest";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@{
+    ViewBag.Title = "testEklemeSayfasi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .card-header.bg-transparent {
+        background-color: #f2f4fa !important;
+    }
+
+    x
+    }
+</style>
+
+<section>
+    <div class="header bg-primary pb-6">
+        <div class="container-fluid">
+            <div class="header-body">
+                <div class="row align-items-center py-4">
+                    <div class="col-lg-6 col-7">
+                        <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                                <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")"><i class="fas fa-home"></i></a></li>
+                                <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">Ana Sayfa</a></li>
+                                <li class="breadcrumb-item"><a href="@Url.Action("Index","ProjeGenel")">Proje Genel</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Proje Genel Ekle</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <div class="col-lg-6 col-5 text-right">
+                        <a href="javascript:void(0)" id="kaydetBtn" class="btn btn-success">Kaydet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container-fluid mt--6">
+        <div class="row justify-content-center">
+            <div class=" col ">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header bg-transparent">
+                            <h3 class="mb-0">Tasarım Belgesi</h3>
+                        </div>
+                        <div class="card-body">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Proje No</th>
+                                        <th>Trafa No</th>
+                                        <th>Transförmatör Tip</th>
+                                        <th>Proje Adı</th>
+                                        <th>Sipariş No</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input /></td>
+                                        <td><input /></td>
+                                        <td><input /></td>
+                                        <td><input /></td>
+                                        <td><input /></td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="card-body">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Elek Dizayn</th>
+                                        <th>Müşteri</th>
+                                        <th>Tarih</th>
+                                        <th>Trafo Adedi</th>
+                                        <th>Proje ID</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input /></td>
+                                        <td><input /></td>
+                                        <td><input type="datetime" /></td>
+                                        <td><input /></td>
+                                        <td><input /></td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header bg-transparent">
+                            <h3 class="mb-0">Trafo</h3>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-group col-4 col-md-4 col-sx-12">
+                                        <label for="exampleInputEmail1">Güç</label>
+                                        <input type="text" class="form-control-sm">
+                                    </div>
+                                    <div class="form-group col-4 col-md-4 col-sx-12">
+                                        <label for="exampleInputEmail1">Frekans</label>
+                                        <input type="text" class="form-control-sm">
+                                    </div>
+
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header bg-transparent">
+                            <h3 class="mb-0">Teknik Değerler</h3>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <fieldset>
+                                            Soğutma Tipi
+                                            <select id="SogutmaTuruId" name="sogutma" class="form-control">
+                                                <option value="0">ONAN</option>
+                                                <option value="1">ONAF</option>
+                                                <option value="2">OFAF</option>
+                                            </select>
+                                        </fieldset>
+                                    </div>
+                                    <div class="form-group col-4 col-md-4 col-sx-12">
+                                        <label for="exampleInputEmail1">Bağlantı Şekli</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group col-4 col-md-4 col-sx-12">
+                                        <label for="exampleInputEmail1">İletken Tipi</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header bg-transparent">
+                            <h3 class="mb-0">Teknik Değerler</h3>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="exampleInputEmail1">Soğutma Tipi</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="exampleInputEmail1">Bağlantı Şekli</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="exampleInputEmail1">İletken Tipi</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

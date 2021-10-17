@@ -1,0 +1,213 @@
+﻿@model OdafHesapProgrami.Models.ProjeGenel
+@{
+    ViewBag.Title = "ProjeEkle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section>
+    <div class="header bg-primary pb-6">
+        <div class="container-fluid">
+            <div class="header-body">
+                <div class="row align-items-center py-4">
+                    <div class="col-lg-6 col-7">
+                        <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                                <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")"><i class="fas fa-home"></i></a></li>
+                                <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">Ana Sayfa</a></li>
+                                <li class="breadcrumb-item"><a href="@Url.Action("Index","ProjeGenel")">Proje Genel</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Proje  Ekle</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    @*<div class="col-lg-6 col-5 text-right">
+                            <a href="javascript:void(0)" id="kaydetBtn" class="btn btn-success">Kaydet</a>
+                        </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container-fluid mt--6">
+        <div class="row justify-content-center">
+            <div class=" col ">
+                <div class="card">
+                    <div class="card-header bg-transparent">
+                        <h3 class="mb-0">Proje Ekle</h3>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="exampleInputEmail1">Task_ID</label>
+                                    <input value="@(Model.Task_ID!=null ? Model.Task_ID :"")" type="email" class="form-control" id="taskidId" aria-describedby="emailHelp">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="exampleInputEmail1">Tasarım Belgesi No</label>
+                                    <input value="@(Model.TasarimBelgesiNo!=null ? Model.TasarimBelgesiNo :"")" type="email" class="form-control" id="TasarimBelgesiNoId" aria-describedby="emailHelp">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="exampleInputEmail1">Trafo Tanım Kodu</label>
+                                    <input value="@(Model.TrafoTanimKodu!=null ? Model.TrafoTanimKodu:"")" type="email" class="form-control" id="TrafoTanimKoduId" aria-describedby="emailHelp">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="exampleInputEmail1">Trafo No</label>
+                                    <input value="@(Model.TrafoNo!=null ? Model.TrafoNo:"")" type="email" class="form-control" id="TrafoNoId" aria-describedby="emailHelp">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="exampleInputEmail1">F</label>
+                                    <input value="@(Model.F!=null ? Model.F:"")" type="email" class="form-control" id="FId" aria-describedby="emailHelp">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="exampleInputEmail1">Proje Adi</label>
+                                    <input value="@(Model.ProjeAdi!=null ? Model.ProjeAdi:"")" type="email" class="form-control" id="ProjeAdiId" aria-describedby="emailHelp">
+                                </div>
+
+                                <div class="form-group col-md-4">
+                                    <fieldset>
+                                        Soğutma Türü
+                                        <select id="SogutmaTuruId" name="sogutma" class="form-control">
+                                            <option value="0">ONAN</option>
+                                            <option value="1">ONAF</option>
+                                            <option value="2">OFAF</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <fieldset>
+                                        Bağlantı Grubu <select id="BaglantiGrubuId" name="sogutma" class="form-control">
+                                            <option value="0">YNyn </option>
+                                            <option value="1">YNyn 0</option>
+                                            <option value="1">YNd11d11 </option>
+
+                                        </select>
+                                    </fieldset>
+                                </div>
+
+
+
+                                <div class="form-group col-md-4">
+                                    <fieldset>
+                                        Imalat Normu
+                                        <select id="ImalatNormuId" name="sogutma" class="form-control">
+                                            <option value="0">IEC</option>
+                                            <option value="1">IEC 60076</option>
+                                        </select>
+                                    </fieldset>
+
+                                </div>
+
+                                <div class="form-group col-md-4">
+                                    <label for="exampleInputEmail1">Sargı Sayısı</label>
+                                    <input value="@(Model.SargıSayisi!=null ? Model.SargıSayisi:"")" type="email" class="form-control" id="SargıSayisiId" aria-describedby="emailHelp">
+                                </div>
+
+                                <div class="form-group col-md-4">
+                                    <label for="exampleInputEmail1">[Teta Müh]</label>
+                                    <input value="@(Model.Teta_Müh!=null ? Model.Teta_Müh:"")" type="email" class="form-control" id="tetaMuhId" aria-describedby="emailHelp">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="exampleInputEmail1">Sargı</label>
+                                    <input value="@(Model.Sargi!=null ? Model.Sargi:"")" type="email" class="form-control" id="SargiID" aria-describedby="emailHelp">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="exampleInputEmail1">Yağ</label>
+                                    <input value="@(Model.Yag!=null ? Model.Yag:"")" type="email" class="form-control" id="YagId" aria-describedby="emailHelp">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="exampleInputEmail1">Çalışma Yeri Yüksekliği</label>
+                                    <input value="@(Model.CalismaYeriYuksekligi!=null ? Model.CalismaYeriYuksekligi:"")" type="email" class="form-control" id="CalismaYeriYuksekligiId" aria-describedby="emailHelp">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="exampleInputEmail1">Max KD Süresi</label>
+                                    <input value="@(Model.MaxKDSuresi!=null ? Model.MaxKDSuresi:"")" type="email" class="form-control" id="MaxKDSuresiId" aria-describedby="emailHelp">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="exampleInputEmail1">Sargı Gerilimi</label>
+                                    <input value="@(Model.SargiGerilimi!=null ? Model.SargiGerilimi:"")" type="email" class="form-control" id="SargiGerilimiId" aria-describedby="emailHelp">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="exampleInputEmail1">Toplam Bakır Ağırlığı</label>
+                                    <input value="@(Model.ToplamBakirAgirligi!=null ? Model.ToplamBakirAgirligi:"")" type="email" class="form-control" id="ToplamBakirAgirligiId" aria-describedby="emailHelp">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="exampleInputEmail1">Sargı ölçüleri</label>
+                                    <input value="@(Model.SargiOlculeri!=null ? Model.SargiOlculeri:"")" type="email" class="form-control" id="SargiOlculeriId" aria-describedby="emailHelp">
+                                </div>
+
+                                <div class="form-group col-xl-10">
+                                    <label for="exampleInputEmail1">Açıklama</label>
+                                    <input value="@(Model.Aciklama!=null ? Model.Aciklama:"")" type="email" class="form-control" id="AciklamaId" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <a href="javascript:void(0)" id="kaydetBtn" class="btn btn-success">Kaydet</a>
+                            <a href="javascript:void(0)" id="kaydetBtn" class="btn btn-info">Düzenle</a>
+                            <a href="javascript:void(0)" id="kaydetBtn" class="btn btn-warning">Sil</a>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+@section scripts{
+    <script>
+
+        $("#kaydetBtn").on("click", function () {
+            debugger;
+            data = {
+                "ProjeID": null,
+                "RootID": null,
+                "Task_ID": $("#taskidId").val(),
+                "TasarimBelgesiNo": $("#TasarimBelgesiNoId").val(),
+                "TrafoTanimKodu": $("#TrafoTanimKoduId").val(),
+                "TrafoNo": $("#TrafoNoId").val(),
+                "ProjeAdi": $("#ProjeAdiId").val(),
+                "F": $("#FId").val(),
+                "SogutmaSekli": $("#SogutmaSekliId").val(),
+                "BaglantiGrubu": $("#BaglantiGrubuId").val(),
+                "SargıSayisi": $("#SargıSayisiId").val(),
+                "ImalatNormu": $("#ImalatNormuId").val(),
+                "Teta_Müh": $("#tetaMuhId").val(),
+                "Sargi": $("#SargiID").val(),
+                "Yag": $("#YagId").val(),
+                "CalismaYeriYuksekligi": $("#CalismaYeriYuksekligiId").val(),
+                "MaxKDSuresi": $("#MaxKDSuresiId").val(),
+                "SargiGerilimi": $("#SargiGerilimiId").val(),
+                "ToplamBakirAgirligi": $("#ToplamBakirAgirligiId").val(),
+                "SargiOlculeri": $("#SargiOlculeriId").val(),
+                "Aciklama": $("#AciklamaId").val(),
+            }
+
+            $.ajax({
+                url: '/ProjeGenel/ProjeEklee/',
+                type: 'POST',
+                data: data,
+                dataType: 'json',
+                success: function (data) {
+                    debugger;
+                    if (data.Success == true) {
+                        alert("Başarı ile kaydedildi");
+                        if (data.ReturnUrl != null) {
+                            window.location = data.ReturnUrl;
+                        }
+                    } else {
+                        alert(data.Message);
+                    }
+                },
+                error: function (hata, ajaxOptions, thrownError) {
+                    debugger;
+                    alert("proje oluştruulamadı");
+                }
+            });
+
+        });
+
+
+    </script>
+}
